@@ -1,17 +1,17 @@
 import os
 
 class Config(object):
-  API_ID = int(os.environ.get("API_ID", ""))
-  API_HASH = os.environ.get("API_HASH", "")
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", ""))
-  SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
-  SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
-  BOT_OWNER = int(os.environ.get("BOT_OWNER", ""))
+  API_ID = int(os.environ.get("API_ID", "25833520"))
+  API_HASH = os.environ.get("API_HASH", "7d012a6cbfabc2d0436d7a09d8362af7")
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "6564652048:AAGB13JaxhQWOi8V1ZkDWudoShGEy465q84")
+  BOT_USERNAME = os.environ.get("BOT_USERNAME", "SILENT_PROVIDER_BOT")
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002053697364"))
+  SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "http://tnshort.net")
+  SHORTLINK_API = os.environ.get('SHORTLINK_API', "43d1c9ccc97189f76d989873c95ef843c6c8710f")
+  BOT_OWNER = int(os.environ.get("BOT_OWNER", "1562935405"))
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Error:error@cluster0.nw25n0q.mongodb.net/?retryWrites=true&w=majority")
-  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "")
-  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
+  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001883268061"))
   BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
   FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
@@ -27,12 +27,12 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 │
 ├🔸 Language: [Python 3](https://www.python.org)
 │
-├🔹 Library: [Pyrogram](https://docs.pyrogram.org)
+├🔹 Updates: [The Silent Team](https://t.me/The_Silent_Teams)
 │
 ╰──────[ 😎 ]───────────⍟
 """
   ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [Mat Dekh BC](tg://settings)
+🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧] (https://t.me/THE_DS_OFFICIAL)
  
  I am Super noob Please Support My Hard Work.
 
