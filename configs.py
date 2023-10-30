@@ -32,7 +32,7 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 ╰──────[ 😎 ]───────────⍟
 """
   ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧] (https://t.me/THE_DS_OFFICIAL)
+🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧](https://t.me/THE_DS_OFFICIAL)
  
  I am Super noob Please Support My Hard Work.
 
