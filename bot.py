@@ -77,13 +77,12 @@ async def start(bot: Client, cmd: Message):
                         InlineKeyboardButton("Updates Channel", url="https://t.me/The_Silent_Teams")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
+                        InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1"),
+                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1""),
+                        
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1"),
-                        InlineKeyboardButton("Contact", url="https://t.me/THE_DS_OFFICIAL")
+                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ]
                 ]
             )
@@ -318,8 +317,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/THE_DS_OFFICIAL")
+                        InlineKeyboardButton("Join Our Channel",
+                                             url="https://t.me/THE_SILENT_TEAMS")
                     ],
                     [
                         InlineKeyboardButton("Go Home", callback_data="gotohome"),
@@ -336,8 +335,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes of Bot",
-                                             url="https://t.me/THE_DS_OFFICIAL")
+                        InlineKeyboardButton("Join Our Channel",
+                                             url="https://t.me/THE_SILENT_TEAMS")
                     ],
                     [
                         InlineKeyboardButton("About Bot", callback_data="aboutbot"),
@@ -357,13 +356,12 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("Updates Channel", url="https://t.me/The_Silent_Teams")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
+                        InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1"),
+                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1"),
+                        
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1"),
-                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1")
+                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ]
                 ]
             )
@@ -415,8 +413,8 @@ async def button(bot: Client, cmd: CallbackQuery):
                         InlineKeyboardButton("Support Group", url="https://t.me/+ZSUTmOXuwqxlODk1")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("Auto Group", url="https://t.me/+CZH0JaSwih44ZTM1") 
+                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
                     ]
                 ]
             )
