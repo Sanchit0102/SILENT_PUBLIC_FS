@@ -1,4 +1,5 @@
 Pyrogram==2.0.106
+telegram
 TgCrypto
 motor
 aiofiles
