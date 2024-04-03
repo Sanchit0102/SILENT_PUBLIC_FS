@@ -95,10 +95,10 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
             "**Your File Stored in my Database!**\n\n"
             f"Here is the Permanent Link of your file: <code>{share_link}</code> \n\n"
             "Just Click the link to get your file!",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=share_link)]])
-            ),
             disable_web_page_preview=True
-        )
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=share_link)]])
+            )
+        
     except FloodWait as sl:
         if sl.value > 45:
             print(f"Sleep of {sl.value}s caused by FloodWait ...")
