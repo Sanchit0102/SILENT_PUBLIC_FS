@@ -58,7 +58,7 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         share_link = f"https://telegram.me/{Config.BOT_USERNAME}?start=PUBLIC_{str_to_b64(str(SaveMessage.id))}"
         silent_link = f"https://telegram.me/share/url?url=https://telegram.me/{Config.BOT_USERNAME}?start=PUBLIC_{str_to_b64(str(SaveMessage.id))}"
         await editable.edit(
-            f"**Batch Files Stored in my Database!**\n\nHere is the Link of your files: '''{share_link}''' \n\n"
+            f"**Batch Files Stored in my Database!**\n\nHere is the Link of your files: {share_link} \n\n"
             f"Just Click the link to get your files!",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=silent_link)]])
@@ -95,7 +95,7 @@ async def save_media_in_channel(bot: Client, editable: Message, message: Message
         silent_link = f"https://telegram.me/share/url?url=https://telegram.me/{Config.BOT_USERNAME}?start=PUBLIC_{str_to_b64(file_er_id)}"
         await editable.edit(
             "**Your File Stored in my Database!**\n\n"
-            f"Here is the Link of your file: '''{share_link}''' \n\n"
+            f"Here is the Link of your file: {share_link} \n\n"
             "Just Click the link to get your file!",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=silent_link)]])
