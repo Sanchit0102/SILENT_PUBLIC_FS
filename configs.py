@@ -1,17 +1,17 @@
 import os
 
 class Config(object):
-  API_ID = int(os.environ.get("API_ID", ""))
-  API_HASH = os.environ.get("API_HASH", "")
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "6495849441:AAHSRNrE2MS26nf2JnqemHXtpnFbbJlz05E")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "MARATHI_PROVIDER_BOT")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002053697364"))
+  API_ID = int(os.environ.get("API_ID", "25833520"))
+  API_HASH = os.environ.get("API_HASH", "7d012a6cbfabc2d0436d7a09d8362af7")
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7016777070:AAHiDAWQR_Q5h50cBW3DbnEci8lfCN1qkD4")
+  BOT_USERNAME = os.environ.get("BOT_USERNAME", "DS_TESTER_BOT")
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002016803498"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "1562935405"))
-  DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://Error:error@cluster0.nw25n0q.mongodb.net/?retryWrites=true&w=majority")
+  DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
-  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001883268061"))
+  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001828164247"))
   BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
   FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", True))
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
@@ -33,10 +33,6 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 """
   ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧](https://t.me/THE_DS_OFFICIAL)
- 
- I am Super noob Please Support My Hard Work.
-
-[Donate Me](https://t.me/THE_DS_OFFICIAL)
 """
   HOME_TEXT = """
 Hello, [{}](tg://user?id={})\n\nThis is a Permanent **FileStore Bot**.
