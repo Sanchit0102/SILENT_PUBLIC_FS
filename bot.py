@@ -33,10 +33,7 @@ from handlers.force_sub_handler import (
     get_invite_link
 )
 from handlers.broadcast_handlers import main_broadcast_handler
-from handlers.save_media import (
-    save_media_in_channel,
-    save_batch_media_in_channel
-)
+from handlers.save_media import save_media_in_channel, save_batch_media_in_channel
 
 MediaList = {}
 
