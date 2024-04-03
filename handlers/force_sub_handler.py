@@ -56,11 +56,11 @@ async def handle_force_sub(bot: Client, cmd: Message):
             )
         )
         return 400
-    except Exception:
-        await bot.send_message(
-            chat_id=cmd.from_user.id,
-            text="[𝐉𝐨𝐢𝐧 𝐌𝐲 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/The_Silent_Teams)",
-            disable_web_page_preview=True
-        )
-        return 200
-    return 200
+    #except Exception:
+    #    await bot.send_message(
+    #        chat_id=cmd.from_user.id,
+    #        text="[𝐉𝐨𝐢𝐧 𝐌𝐲 𝐔𝐩𝐝𝐚𝐭𝐞 𝐂𝐡𝐚𝐧𝐧𝐞𝐥](https://t.me/The_Silent_Teams)",
+    #        disable_web_page_preview=True
+    #    )
+    #    return 200
+    #return 200
