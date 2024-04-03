@@ -59,9 +59,9 @@ async def save_batch_media_in_channel(bot: Client, editable: Message, message_id
         await editable.edit(
             f"**Batch Files Stored in my Database!**\n\nHere is the Permanent Link of your files: <code>{share_link}</code> \n\n"
             f"Just Click the link to get your files!",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=share_link)]])
-            ),
             disable_web_page_preview=True
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Share Link", url=share_link)]])
+            )
         )
         await bot.send_message(
             chat_id=int(Config.LOG_CHANNEL),
