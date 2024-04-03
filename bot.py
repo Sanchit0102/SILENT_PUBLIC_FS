@@ -28,10 +28,10 @@ from handlers.add_user_to_db import add_user_to_database
 from handlers.send_file import send_media_and_reply
 from handlers.helpers import b64_to_str, str_to_b64
 from handlers.check_user_status import handle_user_status
-from handlers.force_sub_handler import (
-    handle_force_sub,
-    get_invite_link
-)
+from handlers.force_sub_handler import get_invite_link # (
+    # handle_force_sub,
+    # 
+# )
 from handlers.broadcast_handlers import main_broadcast_handler
 from handlers.save_media import save_media_in_channel, save_batch_media_in_channel
 
@@ -57,10 +57,10 @@ async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
         await cmd.reply_text("Sorry, You are banned.")
         return
-    if Config.UPDATES_CHANNEL is not None:
-        back = await handle_force_sub(bot, cmd)
-        if back == 400:
-            return
+    # if Config.UPDATES_CHANNEL is not None:
+        # back = await handle_force_sub(bot, cmd)
+        # if back == 400:
+            # return
     
     usr_cmd = cmd.text.split("_", 1)[-1]
     if usr_cmd == "/start":
@@ -106,10 +106,10 @@ async def main(bot: Client, message: Message):
 
         await add_user_to_database(bot, message)
 
-        if Config.UPDATES_CHANNEL is not None:
-            back = await handle_force_sub(bot, message)
-            if back == 400:
-                return
+        # if Config.UPDATES_CHANNEL is not None:
+            # back = await handle_force_sub(bot, message)
+            # if back == 400:
+                # return
 
         if message.from_user.id in Config.BANNED_USERS:
             await message.reply_text("Sorry, You are banned!\n\nContact [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL)",
