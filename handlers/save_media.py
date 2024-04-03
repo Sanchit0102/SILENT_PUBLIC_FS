@@ -4,7 +4,6 @@ import string
 import random
 from configs import Config
 from pyrogram import Client
-from telegram import ParseMode
 from pyrogram.types import (
     Message,
     InlineKeyboardMarkup,
