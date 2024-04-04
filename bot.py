@@ -71,7 +71,7 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
+                        InlineKeyboardButton("Owner 😎", url="tg://settings")
                     ]
                 ]
             )
