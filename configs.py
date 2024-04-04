@@ -8,7 +8,7 @@ class Config(object):
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001828164247"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
-  BOT_OWNER = int(os.environ.get("BOT_OWNER", "1562935405"))
+  BOT_OWNER = int(os.environ.get("BOT_OWNER", "563896360"))
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001828164247"))
