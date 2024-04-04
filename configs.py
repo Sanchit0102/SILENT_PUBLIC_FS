@@ -3,9 +3,9 @@ import os
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "25833520"))
   API_HASH = os.environ.get("API_HASH", "7d012a6cbfabc2d0436d7a09d8362af7")
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7016777070:AAHiDAWQR_Q5h50cBW3DbnEci8lfCN1qkD4")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "DS_TESTER_BOT")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002016803498"))
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7038670237:AAEBFulq0RNu80O7Kg_ukKTgPWqrWYi-E98")
+  BOT_USERNAME = os.environ.get("BOT_USERNAME", "PublicFileStore01_Bot")
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001828164247"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   BOT_OWNER = int(os.environ.get("BOT_OWNER", "1562935405"))
