@@ -1,4 +1,5 @@
 # (c) @TeleRoidGroup || @PredatorHackerzZ
+# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧
 
 import os
 import asyncio
@@ -167,12 +168,12 @@ async def main(bot: Client, message: Message):
             )
 
 
-@Bot.on_message(filters.private & filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
+@Bot.on_message(filters.private & filters.command("broadcast") & filters.user(Config.ADMINS) & filters.reply)
 async def broadcast_handler_open(_, m: Message):
     await main_broadcast_handler(m, db)
 
 
-@Bot.on_message(filters.private & filters.command("status") & filters.user(Config.BOT_OWNER))
+@Bot.on_message(filters.private & filters.command("status") & filters.user(Config.ADMINS))
 async def sts(_, m: Message):
     total_users = await db.total_users_count()
     await m.reply_text(
@@ -181,7 +182,7 @@ async def sts(_, m: Message):
     )
 
 
-@Bot.on_message(filters.private & filters.command("ban_user") & filters.user(Config.BOT_OWNER))
+@Bot.on_message(filters.private & filters.command("ban_user") & filters.user(Config.ADMINS))
 async def ban(c: Client, m: Message):
     
     if len(m.command) == 1:
@@ -225,7 +226,7 @@ async def ban(c: Client, m: Message):
         )
 
 
-@Bot.on_message(filters.private & filters.command("unban_user") & filters.user(Config.BOT_OWNER))
+@Bot.on_message(filters.private & filters.command("unban_user") & filters.user(Config.ADMINS))
 async def unban(c: Client, m: Message):
 
     if len(m.command) == 1:
@@ -264,7 +265,7 @@ async def unban(c: Client, m: Message):
         )
 
 
-@Bot.on_message(filters.private & filters.command("banned_users") & filters.user(Config.BOT_OWNER))
+@Bot.on_message(filters.private & filters.command("banned_users") & filters.user(Config.ADMINS))
 async def _banned_users(_, m: Message):
     
     all_banned_users = await db.get_all_banned_users()
@@ -397,7 +398,7 @@ async def button(bot: Client, cmd: CallbackQuery):
         if Config.UPDATES_CHANNEL is None:
             await cmd.answer("Sorry Sir, You didn't Set any Updates Channel!", show_alert=True)
             return
-        if not int(cmd.from_user.id) == Config.BOT_OWNER:
+        if not int(cmd.from_user.id) == Config.ADMINS:
             await cmd.answer("You are not allowed to do that!", show_alert=True)
             return
         try:
