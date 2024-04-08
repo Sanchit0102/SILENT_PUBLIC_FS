@@ -9,10 +9,10 @@ class Config(object):
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   try:
-    ADMINS=[]
-    for x in (os.environ.get("ADMINS", "563896360 1562935405 7053097886").split()):
-        ADMINS.append(int(x))
-except ValueError:
+      ADMINS=[]
+      for x in (os.environ.get("ADMINS", "563896360 1562935405 7053097886").split()):
+          ADMINS.append(int(x))
+  except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
   UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
