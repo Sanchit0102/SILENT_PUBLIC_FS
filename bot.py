@@ -1,5 +1,5 @@
 # (c) @TeleRoidGroup || @PredatorHackerzZ
-# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧
+# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧ ==> For New Updates And Changes ! 
 
 import os
 import asyncio
