@@ -1,4 +1,5 @@
-# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧ ==> For New Updates And Changes !
+# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧        ==> For New Updates And Changes !
+
 import os
 
 class Config(object):
