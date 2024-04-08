@@ -1,3 +1,5 @@
+# (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧   ==> For New Updates And Changes !
+
 import asyncio
 from typing import (
     Union
