@@ -8,7 +8,8 @@ class Config(object):
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002016803498"))
   SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
-  ADMINS=[]
+  try:
+    ADMINS=[]
     for x in (os.environ.get("ADMINS", "563896360 1562935405 7053097886").split()):
         ADMINS.append(int(x))
 except ValueError:
