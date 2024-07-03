@@ -8,8 +8,8 @@ class Config(object):
   BOT_TOKEN = os.environ.get("BOT_TOKEN", "7038670237:AAEBFulq0RNu80O7Kg_ukKTgPWqrWYi-E98")
   BOT_USERNAME = os.environ.get("BOT_USERNAME", "PublicFileStore01_Bot")
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001828164247"))
-  SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
-  SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
+  # SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
+  # SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   try:
       ADMINS=[]
       for x in (os.environ.get("ADMINS", "563896360 1562935405 7053097886").split()):
@@ -17,7 +17,7 @@ class Config(object):
   except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
-  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "https://t.me/The_Silent_Teams")
+  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002224312828")
   LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001828164247"))
   BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
   FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", False))
