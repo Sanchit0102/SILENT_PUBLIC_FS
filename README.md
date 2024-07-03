@@ -15,14 +15,13 @@ Use these commands:
 • Start Command: <code>gunicorn app:app & python3 bot.py</code>
 <br>
 <br>
-<a href="https://render.com/deploy?repo=https://github.com/VJBots/VJ-AutoCaption-Bot/tree/main">
+<a href="https://render.com/deploy?repo=https://github.com/Sanchit0102/SILENT_PUBLIC_FS/tree/main">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
 </details>
 
 
 ### Deploy On Koyeb
-<br>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/Sanchit0102/SILENT_PUBLIC_FS&branch=main&name=filestorevj"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
 
 ### Deploy Now:
