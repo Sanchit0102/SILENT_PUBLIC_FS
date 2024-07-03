@@ -1,5 +1,5 @@
 
-### Deploy On Render
+### Deploy On Render:
 <details><summary>Deploy To Render</summary>
 • Runtime: Python 3
 <br>
@@ -16,10 +16,10 @@
 </details>
 
 
-### Deploy On Koyeb
+### Deploy On Koyeb:
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/Sanchit0102/SILENT_PUBLIC_FS&branch=main&name=filestorevj"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
 
-### Deploy Now:
+### Deploy On Heroku:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sanchit0102/DS_FS_WITH_SHORTNER)
 
 ## Commands:
