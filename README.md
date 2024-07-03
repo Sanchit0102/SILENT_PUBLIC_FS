@@ -1,8 +1,6 @@
 
 ### Deploy On Render
 <details><summary>Deploy To Render</summary>
-<br>
-<br>
 • Runtime: Python 3
 <br>
 <br>
