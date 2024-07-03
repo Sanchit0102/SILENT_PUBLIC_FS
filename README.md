@@ -2,9 +2,6 @@
 ### Deploy On Render
 <details><summary>Deploy To Render</summary>
 <br>
-<b>
-Use these commands:
-<br>
 <br>
 • Runtime: Python 3
 <br>
