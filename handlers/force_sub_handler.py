@@ -19,7 +19,7 @@ async def get_invite_link(bot: Client, chat_id: Union[str, int]):
         await asyncio.sleep(e.value)
         return await get_invite_link(bot, chat_id)
 
-'''
+
 async def handle_force_sub(bot: Client, cmd: Message):
     if Config.UPDATES_CHANNEL and Config.UPDATES_CHANNEL.startswith("-100"):
         channel_chat_id = int(Config.UPDATES_CHANNEL)
