@@ -39,10 +39,6 @@ Use these settings when adding a monitor:</b>
 <a target="_blank" href="https://app.koyeb.com/deploy?type=git&repository=github.com/Sanchit0102/SILENT_PUBLIC_FS&branch=main&name=filestorevj"><img alt="Deploy to Koyeb" src="https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg"></a>
 </details>
 
-
-![Configs](https://telegra.ph/file/033408792afc4d4f1f8f6.png) 🤖
-
-
 ### Deploy Now:
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Sanchit0102/DS_FS_WITH_SHORTNER)
 
