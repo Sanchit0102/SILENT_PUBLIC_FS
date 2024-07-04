@@ -349,8 +349,8 @@ async def button(bot: Client, cmd: CallbackQuery):
             else:
                 channel_chat_id = Config.UPDATES_CHANNEL
             try:
-                user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
-                if user.status == "kicked":
+                user = await bot.get_chat_member(-1002158291506, cmd.message.chat.id)
+                if user.status == "BANNED":
                     await cmd.message.edit(
                         text="Sorry Sir, You are Banned to use me. Contact my [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL).",
                         disable_web_page_preview=True
