@@ -5,9 +5,9 @@ import os
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "25833520"))
   API_HASH = os.environ.get("API_HASH", "7d012a6cbfabc2d0436d7a09d8362af7")
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7038670237:AAEBFulq0RNu80O7Kg_ukKTgPWqrWYi-E98")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "PublicFileStore01_Bot")
-  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001828164247"))
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "6347465173:AAGRx7jwSd4YZfNEt048BSx5zW11wKkDCCI")
+  BOT_USERNAME = os.environ.get("BOT_USERNAME", "SILENT_REACT_BOT")
+  DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1002016803498"))
   # SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   # SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
   try:
@@ -17,8 +17,8 @@ class Config(object):
   except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
   DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://trumbot:trumbot@cluster0.cfkaeno.mongodb.net/?retryWrites=true&w=majority")
-  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002224312828")
-  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001828164247"))
+  UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "-1002158291506")
+  LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002158291506"))
   BANNED_USERS = set(int(x) for x in os.environ.get("BANNED_USERS", "").split())
   FORWARD_AS_COPY = bool(os.environ.get("FORWARD_AS_COPY", False))
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
