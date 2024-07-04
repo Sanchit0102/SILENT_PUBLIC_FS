@@ -1,4 +1,7 @@
 # (c) 𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧   ==> For New Updates And Changes !
+# (c) @TECH_VJ (vj bots) || @TeleRoidGroup || @PredatorHackerzZ
+
+# Dont Try To Remove Credit
 
 import asyncio
 from typing import (
