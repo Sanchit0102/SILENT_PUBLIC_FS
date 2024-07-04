@@ -29,10 +29,7 @@ from handlers.add_user_to_db import add_user_to_database
 from handlers.send_file import send_media_and_reply
 from handlers.helpers import b64_to_str, str_to_b64
 from handlers.check_user_status import handle_user_status
-from handlers.force_sub_handler import get_invite_link # (
-    # handle_force_sub,
-    # 
-# )
+from handlers.force_sub_handler import get_invite_link, handle_force_sub
 from handlers.broadcast_handlers import main_broadcast_handler
 from handlers.save_media import save_media_in_channel, save_batch_media_in_channel
 
@@ -58,10 +55,10 @@ async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
         await cmd.reply_text("Sorry, You are banned.")
         return
-    # if Config.UPDATES_CHANNEL is not None:
-        # back = await handle_force_sub(bot, cmd)
-        # if back == 400:
-            # return
+    if Config.UPDATES_CHANNEL is not None:
+        back = await handle_force_sub(bot, cmd)
+        if back == 400:
+            return
     
     usr_cmd = cmd.text.split("_", 1)[-1]
     if usr_cmd == "/start":
@@ -107,10 +104,10 @@ async def main(bot: Client, message: Message):
 
         await add_user_to_database(bot, message)
 
-        # if Config.UPDATES_CHANNEL is not None:
-            # back = await handle_force_sub(bot, message)
-            # if back == 400:
-                # return
+        if Config.UPDATES_CHANNEL is not None:
+            back = await handle_force_sub(bot, message)
+            if back == 400:
+                return
 
         if message.from_user.id in Config.BANNED_USERS:
             await message.reply_text("Sorry, You are banned!\n\nContact [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL)",
@@ -182,15 +179,15 @@ async def sts(_, m: Message):
     )
 
 
-@Bot.on_message(filters.private & filters.command("ban_user") & filters.user(Config.ADMINS))
+@Bot.on_message(filters.private & filters.command("ban") & filters.user(Config.ADMINS))
 async def ban(c: Client, m: Message):
     
     if len(m.command) == 1:
         await m.reply_text(
             f"Use this command to ban any user from the bot.\n\n"
             f"Usage:\n\n"
-            f"`/ban_user user_id ban_duration ban_reason`\n\n"
-            f"Eg: `/ban_user 1234567 28 You misused me.`\n"
+            f"`/ban user_id ban_duration ban_reason`\n\n"
+            f"Eg: `/ban 1234567 28 You misused me.`\n"
             f"This will ban user with id `1234567` for `28` days for the reason `You misused me`.",
             quote=True
         )
@@ -226,14 +223,14 @@ async def ban(c: Client, m: Message):
         )
 
 
-@Bot.on_message(filters.private & filters.command("unban_user") & filters.user(Config.ADMINS))
+@Bot.on_message(filters.private & filters.command("unban") & filters.user(Config.ADMINS))
 async def unban(c: Client, m: Message):
 
     if len(m.command) == 1:
         await m.reply_text(
             f"Use this command to unban any user.\n\n"
-            f"Usage:\n\n`/unban_user user_id`\n\n"
-            f"Eg: `/unban_user 1234567`\n"
+            f"Usage:\n\n`/unban user_id`\n\n"
+            f"Eg: `/unban 1234567`\n"
             f"This will unban user with id `1234567`.",
             quote=True
         )
@@ -344,7 +341,6 @@ async def button(bot: Client, cmd: CallbackQuery):
                 ]
             )
         )
-
     elif "refreshForceSub" in cb_data:
         if Config.UPDATES_CHANNEL:
             if Config.UPDATES_CHANNEL.startswith("-100"):
@@ -355,12 +351,12 @@ async def button(bot: Client, cmd: CallbackQuery):
                 user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
                 if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL).",
+                        text="Sorry, You are Banned to use me. Contact my [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL).",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
-                invite_link = await get_invite_link(channel_chat_id)
+                invite_link = await get_invite_link(bot, chat_id=channel_chat_id)
                 await cmd.message.edit(
                     text="**I like Your Smartness But Don't Be Oversmart! 😑**\n\n",
                     reply_markup=InlineKeyboardMarkup(
