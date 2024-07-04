@@ -356,13 +356,13 @@ async def button(bot: Client, cmd: CallbackQuery):
                     )
                     return
             except UserNotParticipant:
-                invite_link = await get_invite_link(channel_chat_id)
+                # invite_link = await get_invite_link(channel_chat_id)
                 await cmd.message.edit(
                     text="**I like Your Smartness But Don't Be Oversmart! 😑**\n\n",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🤖 Join Updates Channel", url="https://t.me/BOT_TESTING_OFFICIAL")
                             ],
                             [
                                 InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
