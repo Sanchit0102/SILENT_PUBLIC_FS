@@ -58,10 +58,10 @@ async def start(bot: Client, cmd: Message):
     if cmd.from_user.id in Config.BANNED_USERS:
         await cmd.reply_text("Sorry, You are banned.")
         return
-    # if Config.UPDATES_CHANNEL is not None:
-        # back = await handle_force_sub(bot, cmd)
-        # if back == 400:
-            # return
+    if Config.UPDATES_CHANNEL is not None:
+        back = await handle_force_sub(bot, cmd)
+        if back == 400:
+            return
     
     usr_cmd = cmd.text.split("_", 1)[-1]
     if usr_cmd == "/start":
@@ -107,10 +107,10 @@ async def main(bot: Client, message: Message):
 
         await add_user_to_database(bot, message)
 
-        # if Config.UPDATES_CHANNEL is not None:
-            # back = await handle_force_sub(bot, message)
-            # if back == 400:
-                # return
+        if Config.UPDATES_CHANNEL is not None:
+            back = await handle_force_sub(bot, message)
+            if back == 400:
+                return
 
         if message.from_user.id in Config.BANNED_USERS:
             await message.reply_text("Sorry, You are banned!\n\nContact [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL)",
@@ -182,15 +182,15 @@ async def sts(_, m: Message):
     )
 
 
-@Bot.on_message(filters.private & filters.command("ban_user") & filters.user(Config.ADMINS))
+@Bot.on_message(filters.private & filters.command("ban") & filters.user(Config.ADMINS))
 async def ban(c: Client, m: Message):
     
     if len(m.command) == 1:
         await m.reply_text(
             f"Use this command to ban any user from the bot.\n\n"
             f"Usage:\n\n"
-            f"`/ban_user user_id ban_duration ban_reason`\n\n"
-            f"Eg: `/ban_user 1234567 28 You misused me.`\n"
+            f"`/ban user_id ban_duration ban_reason`\n\n"
+            f"Eg: `/ban 1234567 28 You misused me.`\n"
             f"This will ban user with id `1234567` for `28` days for the reason `You misused me`.",
             quote=True
         )
@@ -226,14 +226,14 @@ async def ban(c: Client, m: Message):
         )
 
 
-@Bot.on_message(filters.private & filters.command("unban_user") & filters.user(Config.ADMINS))
+@Bot.on_message(filters.private & filters.command("unban") & filters.user(Config.ADMINS))
 async def unban(c: Client, m: Message):
 
     if len(m.command) == 1:
         await m.reply_text(
             f"Use this command to unban any user.\n\n"
-            f"Usage:\n\n`/unban_user user_id`\n\n"
-            f"Eg: `/unban_user 1234567`\n"
+            f"Usage:\n\n`/unban user_id`\n\n"
+            f"Eg: `/unban 1234567`\n"
             f"This will unban user with id `1234567`.",
             quote=True
         )
