@@ -341,7 +341,6 @@ async def button(bot: Client, cmd: CallbackQuery):
                 ]
             )
         )
-
     elif "refreshForceSub" in cb_data:
         if Config.UPDATES_CHANNEL:
             if Config.UPDATES_CHANNEL.startswith("-100"):
@@ -349,21 +348,21 @@ async def button(bot: Client, cmd: CallbackQuery):
             else:
                 channel_chat_id = Config.UPDATES_CHANNEL
             try:
-                user = await bot.get_chat_member(-1002158291506, cmd.message.chat.id)
-                if user.status == "BANNED":
+                user = await bot.get_chat_member(channel_chat_id, cmd.message.chat.id)
+                if user.status == "kicked":
                     await cmd.message.edit(
-                        text="Sorry Sir, You are Banned to use me. Contact my [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL).",
+                        text="Sorry, You are Banned to use me. Contact my [𝐎𝐰𝐧𝐞𝐫](https://t.me/THE_DS_OFFICIAL).",
                         disable_web_page_preview=True
                     )
                     return
             except UserNotParticipant:
-                # invite_link = await get_invite_link(-1002158291506)
+                invite_link = await get_invite_link(channel_chat_id)
                 await cmd.message.edit(
                     text="**I like Your Smartness But Don't Be Oversmart! 😑**\n\n",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url="https://t.me/BOT_TESTING_OFFICIAL") #invite_link.invite_link)
+                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
