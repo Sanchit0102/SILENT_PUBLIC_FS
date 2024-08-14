@@ -25,6 +25,7 @@ class Config(object):
   BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", True))
   BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "").split()))
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
+  
   ABOUT_BOT_TEXT = f"""
 This is a Permanent FileStore Bot. 
 Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edit Permission, I will add save Uploaded File in Channel and Share a Shareable Link. 
@@ -39,9 +40,11 @@ Send Me any Media or File. I can Work In Channel too. Add Me to Channel with Edi
 │
 ╰──────[ 😎 ]───────────⍟
 """
+  
   ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [𝚂𝙰𝙽𝙲𝙷𝙸𝚃 ♛⛧](https://t.me/THE_DS_OFFICIAL)
 """
+  
   HOME_TEXT = """
 Hello, [{}](tg://user?id={})\n\nThis is a **Public File Store Bot**.
 
@@ -55,3 +58,29 @@ Note: Store only MOVIE & SERIES Nothing else.
 
 PORNOGRAPHY CONTENTS and STUDEY METRIALS are strictly prohibited & get Permanent Ban.
 """
+
+  PRIVACY = """<blockquote><b><u>Privacy Policy for Public File Store Bot 📁</u></b></blockquote>
+
+Last updated: 15-08-2024
+
+Thank you for using File Store Bot ! This Privacy Policy describes how your personal information is collected, used, and shared when you use this bot.
+
+<blockquote><b><u>Information We Collect</u></b></blockquote>
+
+Public File Store Bot collect User_id & Stored Files In Bot from its users.
+
+<blockquote><b><u><u>How We Use Your Information</u></b></blockquote>
+
+We do not use, store, or share any information about you.\nWe Just Collect User Id To Ban Any User Who Not Follow Our Rules
+
+<blockquote><b><u>Sharing Your Information</u></b></blockquote>
+
+We do not share any personal information.
+
+<blockquote><b><u>Changes to This Privacy Policy</u></b></blockquote>
+
+We may update this Privacy Policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal, or regulatory reasons.
+
+<blockquote><b><u>Contact</u></b></blockquote>
+
+If you have any questions or suggestions about our Privacy Policy, Then Contact My Developer.</b>"""
