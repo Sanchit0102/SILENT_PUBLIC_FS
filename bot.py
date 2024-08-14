@@ -178,6 +178,13 @@ async def sts(_, m: Message):
         quote=True
     )
 
+@Bot.on_message(filters.private & filters.command(["privacy"]))
+async def privacy(bot: Client, m: Message):
+    await m.reply_text(
+        text=Config.PRIVACY,
+        quote=True
+    )
+
 
 @Bot.on_message(filters.private & filters.command("ban") & filters.user(Config.ADMINS))
 async def ban(c: Client, m: Message):
