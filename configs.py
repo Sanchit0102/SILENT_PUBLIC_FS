@@ -6,8 +6,8 @@ import os
 class Config(object):
   API_ID = int(os.environ.get("API_ID", "25833520"))
   API_HASH = os.environ.get("API_HASH", "7d012a6cbfabc2d0436d7a09d8362af7")
-  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7038670237:AAEBFulq0RNu80O7Kg_ukKTgPWqrWYi-E98")
-  BOT_USERNAME = os.environ.get("BOT_USERNAME", "PublicFileStore01_Bot")
+  BOT_TOKEN = os.environ.get("BOT_TOKEN", "7417028047:AAHjcx9aw0mZVct7l8GeCbe7aWPwOW1eddM")
+  BOT_USERNAME = os.environ.get("BOT_USERNAME", "PublicFileStore1_Bot")
   DB_CHANNEL = int(os.environ.get("DB_CHANNEL", "-1001828164247"))
   # SHORTLINK_URL = os.environ.get('SHORTLINK_URL', "")
   # SHORTLINK_API = os.environ.get('SHORTLINK_API', "")
